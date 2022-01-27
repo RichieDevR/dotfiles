@@ -94,7 +94,7 @@ endfunction
 augroup MyColors
     autocmd!
     autocmd ColorScheme dracula call DraculaPMenu()
-    autocmd ColorScheme * call TransparentBackground() " uncomment if you are using a translucent terminal and you want nvim to use that
+    autocmd ColorScheme * call TransparentBackground() 
 augroup END
 
 " Main Coloring Configurations
@@ -370,6 +370,8 @@ lua require('lualine.defaultline')
 command! Scratch lua require'tools'.makeScratch()
 let mapleader=","
 nmap <leader>H :Startify<CR>
+nmap <leader>ww :w<CR>
+nmap <leader>wq :wq<CR>
 nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>q :NERDTreeToggle<CR>
