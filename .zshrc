@@ -18,7 +18,7 @@ alias lim='lvim'
 alias oldvim='/vim'
 ##simplify root privs
 alias doas='doas --'
-alias sudo='doas'
+alias su='doas'
 # dnf and yum
 alias dinstall='doas dnf install'
 alias dremove='doas dnf remove'
@@ -32,6 +32,8 @@ alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
+## change cat to bat ##
+alias cat='bat'
 ### git -e- up ###
 alias gclone='git clone'
 alias gcommit='git commit'
@@ -48,7 +50,8 @@ export SERVER_IP='hostname -I'
 # browser-sync server alias for multi-device private network server
 alias privnet='browser-sync start --serve --files . --no-notify --host $SERVER_IP --port 9000'
 alias serve='browser-sync start --serve --files .'
-
+## git alias for dotfile tracking ##
+alias config='/usr/bin/git --git-dir=/home/Richie/.conf_store/ --work-tree=/home/Richie'
 ### Path ##
 export PATH=/home/Richie/.cargo/bin:$PATH
 
@@ -71,4 +74,3 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-alias config='/usr/bin/git --git-dir=/home/Richie/.cfg/ --work-tree=/home/Richie'
