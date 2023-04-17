@@ -1,1 +1,5 @@
 alias config='/usr/bin/git --git-dir=/home/wally_road/dotfiles/ --work-tree=/home/wally_road'
+alias cat='bat'
+alias xx='clear'
+alias plugins='asdf plugin list all'
+alias version='asdf global $1'
