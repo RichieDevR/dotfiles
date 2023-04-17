@@ -3,3 +3,29 @@ alias cat='bat'
 alias xx='clear'
 alias plugins='asdf plugin list all'
 alias version='asdf global $1'
+alias setsource='~/.zsh/scripts/update_sources.sh $1'
+alias setexport='~/.zsh/scripts/add_exports.sh $1'
+alias ls='exa'
+alias tree='exa -Gr --icons -HTL $1'
+alias file='exa -T | rg $1'
+alias e="exa --icons --color=always --group-directories-first"
+ 
+# function exa-fzf-bat() {
+#   local file
+#   file="$(e $@ | fzf --height 40% --preview 'bat --color=always {}' --preview-window down:1:hidden:wrap)"
+#   if [[ -n "$file" ]]; then
+#     bat --color=always --pager=never "$file"
+#   fi
+# }
+ 
+# alias ef='exa-fzf-bat'
+ 
+# function exa-fzf-rg-bat() {
+#   local file
+#   file="$(exa -a --icons --color=always --group-directories-first --tree --level=2 $@ | rg --files-with-matches --hidden --no-messages # fzf --height 50% --reverse --preview-window=wrap --preview 'bat --style=numbers --color=always {}')"
+#   if [[ -n "$file" ]]; then
+#     bat --style=numbers --color=always --pager=never "$file"
+#   fi
+# }
+ 
+# alias erf='exa-fzf-rg-bat'
