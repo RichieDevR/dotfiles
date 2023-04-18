@@ -11,10 +11,6 @@ if test -n "$KITTY_INSTALLATION_DIR"; then
     unfunction kitty-integration
 fi
 
-
-
-# sourcing ~/.zsh/source_list to update sources in seperate file. export vartiables sourced here
-source "$HOME/.zsh/source_list"
 # startup for starship
 eval "$(starship init zsh)"
 # startup for z.lua
@@ -25,3 +21,5 @@ fpath+=$HOME/.zfunc
 autoload -Uz compinit && compinit
 setopt completealiases
 setopt correct
+# sourcing ~/.zsh/source_list to update sources in seperate file. export vartiables sourced here
+source "$HOME/.zsh/source_list"
