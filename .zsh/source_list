@@ -1,4 +1,3 @@
-source "/opt/asdf-vm/asdf.sh"
 source "/home/wally_road/.zsh/aliases"
 source "/home/wally_road/.fresh/build/shell.sh"
 source "/home/wally_road/.zsh/export_list"
