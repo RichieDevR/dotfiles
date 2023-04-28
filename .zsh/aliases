@@ -3,6 +3,7 @@ alias cat='bat'
 alias xx='clear'
 alias setsource='~/.zsh/scripts/update_sources.sh $1'
 alias setexport='~/.zsh/scripts/add_exports.sh $1'
+alias ls='exa --icons'
 alias lc='exa --icons ~/.config'
 alias lca='exa --icons --header --group-directories-first -lFa -s=Name ~/.config'
 alias lsa='exa --icons --header --group-directories-first -lFa -s=Name'
@@ -14,3 +15,4 @@ alias e="exa --icons --color=always --group-directories-first"
 alias nv='nvim'
 alias vim='nvim'
 alias v='nvim'
+alias exc='$HOME/.local/bin/exercism' # for some reason this is neccesary for exercism.delete this when u fig it out.syntax HL wonky 4 this 4 now.
