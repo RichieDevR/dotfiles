@@ -25,6 +25,8 @@ exercism () {
 
 # setup for fnm. this may be temporary as i will probably setup asdf or rtx when i have more time to atleast have available for projects as a more universal tool and to be able to setup project specific tooling without affecting my daily setup. 
 eval "$(fnm env --use-on-cd)"
+# setup for rtx
+eval "$(rtx activate zsh)"
 # startup for starship
 eval "$(starship init zsh)"
 # startup for z.lua

@@ -16,3 +16,11 @@ alias nv='nvim'
 alias vim='nvim'
 alias v='nvim'
 alias exc='$HOME/.local/bin/exercism' # for some reason this is neccesary for exercism.delete this when u fig it out.syntax HL wonky 4 this 4 now.
+## awesome fzf function aliases
+alias rm='fzf-rm'
+alias fzenv='fzf-env-vars'
+alias cd-parent='fzf-cd-to-parent'
+alias cd-file='fzf-cd-to-file'
+alias cd-all='fzf-cd-incl-hidden'
+alias fzfd='fzf-find-files'
+alias man='fzf-man'
