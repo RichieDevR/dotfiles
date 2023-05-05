@@ -45,5 +45,25 @@ setopt correct
 # luckily rtx is a drop in replacement so everything should still work if not should be easy to 
 # change will porably do this tn for atleast the basic and most vital stuff.
 
-# sourcing ~/.zsh/source_list to update sources in seperate file. export vartiables sourced here
-source "$HOME/.zsh/source_list"
+
+# sourcing ~/.zsh/source_list to update sources in seperate file. exported variables sourced here in sepertae file
+#as well
+source "$HOME/.zsh/source_list.zsh"
+
+## use degit to install modules
+zstyle ':zim:zmodule' use 'degit'
+
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
+
