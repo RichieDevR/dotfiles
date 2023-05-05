@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-SOURCE_LIST="$HOME/.zsh/source_list"
+SOURCE_LIST="$HOME/.zsh/source_list.zsh"
 
 if [ ! -f "$SOURCE_LIST" ]; then
   touch $SOURCE_LIST

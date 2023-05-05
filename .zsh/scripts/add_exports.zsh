@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-EXPORT_LIST="$HOME/.zsh/export_list"
+EXPORT_LIST="$HOME/.zsh/export_list.zsh"
 
 if [[ ! -f "$EXPORT_LIST" ]]; then
   touch "$EXPORT_LIST"

@@ -1,6 +1,6 @@
 source "/home/wally_road/.zsh/aliases"
 source "/home/wally_road/.fresh/build/shell.sh"
-source "/home/wally_road/.zsh/export_list"
+source "/home/wally_road/.zsh/export_list.zsh"
 source "/home/wally_road/.cargo/env"
 source "/home/wally_road/.zsh/scripts/awesome-fzf.zsh"
 source "/home/wally_road/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
