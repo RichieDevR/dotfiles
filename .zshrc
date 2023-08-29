@@ -4,7 +4,7 @@ fi
 
 export PATH
 
-# sourcing ~/.zsh/source_list to update sources in seperate file. export vartiables sourced here
+# sourcing ~/.zsh/source_list to update sources in seperate file. export variables sourced here
 #source "$HOME/.zsh/source_list"
 
 if test -n "$KITTY_INSTALLATION_DIR"; then
@@ -13,12 +13,14 @@ if test -n "$KITTY_INSTALLATION_DIR"; then
     kitty-integration
     unfunction kitty-integration
 fi
-## expanding exercism excersize install command to switch user to the working dir for the newly downloaded track
+
 exercism () {
-    local out
-    readarray -t out < <(command exercism "$@")
+    local out=()
+    while IFS= read -r line; do
+        out+=("$line")
+    done < <(command exercism "$@")
     printf '%s\n' "${out[@]}"
-    if [[ $1 == "download" && -d "${out[-1]}" ]]; then
+    if [[ \$1 == "download" && -d "${out[-1]}" ]]; then
         cd "${out[-1]}" || return 1
     fi
 }
@@ -67,3 +69,11 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
+
+# pnpm
+export PNPM_HOME="/home/wally_road/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
