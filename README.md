@@ -1,4 +1,6 @@
-# Testing and Installing
+# Branch for finishing and then experimenting with Dockerfile if desired.
+
+## Testing and Installing
 
 In order to ensure that install script is working properly first:
 
