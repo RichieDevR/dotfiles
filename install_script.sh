@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# TODO: add install for neovim on Arch and Ubuntu/Debian,
+# as well as linking and installing other dependencies
+# for dotfiles on all three OS.
+
 # Check the OS distribution
 if [ "$(cat /etc/os-release | grep -E 'ID=(debian|ubuntu)')" ]; then
 	# Install Rust using rustup & zsh on Debian/Ubuntu
