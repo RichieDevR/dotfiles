@@ -16,4 +16,5 @@ If no errors and expected output received script is safe to run on new system.
 2. Add steps for setting up continued Dotfile tracking on new system.
 
 Using bare repo setup for now however I'm interested in stow so may
-switch to that in the near future.
+switch to that in the near future. I also need to add submodule
+tracking for zim to properly automate setup.
