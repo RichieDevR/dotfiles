@@ -1,4 +1,6 @@
-# Testing and Installing
+# Branch is for experimenting with install script.
+
+## Testing and Installing
 
 In order to ensure that install script is working properly first:
 
