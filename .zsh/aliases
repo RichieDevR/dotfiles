@@ -1,4 +1,4 @@
-alias config='/usr/bin/git --git-dir=/home/wally_road/dotfiles/ --work-tree=/home/wally_road'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias cat='bat'
 alias xx='clear'
 alias setsource='~/.zsh/scripts/update_sources.sh $1'
