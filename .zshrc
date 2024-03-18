@@ -189,3 +189,7 @@ esac
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+# For zsh subshells,warpify command preferences.
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
+
