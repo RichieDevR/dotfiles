@@ -193,3 +193,31 @@ fpath+=~/.zfunc
 # For zsh subshells,warpify command preferences.
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Paperspace
+export PAPERSPACE_INSTALL="/home/rico/.paperspace"
+export PATH="$PAPERSPACE_INSTALL/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/rico/google-cloud-sdk/path.zsh.inc' ]; then . '/home/rico/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/rico/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/rico/google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/conda/etc/profile.d/conda.sh" ]; then
+        . "/opt/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

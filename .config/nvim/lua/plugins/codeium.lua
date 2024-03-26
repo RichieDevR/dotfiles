@@ -1,5 +1,7 @@
 return {
   "Exafunction/codeium.vim",
+  lazy = true,
+  enabled = false,
   config = function()
     -- Change '<C-g>' here to any keycode you like.
     vim.keymap.set("i", "<C-g>", function()
